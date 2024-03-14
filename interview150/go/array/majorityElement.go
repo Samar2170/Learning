@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func majorityElement(nums []int) int {
 	nmap := make(map[int]int)
 	for _, n := range nums {
@@ -15,5 +17,12 @@ func majorityElement(nums []int) int {
 		}
 	}
 	return 0
+}
 
+func main() {
+	nums := []int{3, 2, 3}
+	fmt.Println(majorityElement(nums))
+
+	nums = []int{2, 2, 1, 1, 1, 2, 2}
+	fmt.Println(majorityElement(nums))
 }
